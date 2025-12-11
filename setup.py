@@ -28,7 +28,7 @@ here = pathlib.Path(__file__).parent.resolve()
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 install_requires = [
-    'ale-py == 0.7.5',
+    'ale-py >= 0.7.5',
     'AutoROM == 0.4.2',
     'AutoROM.accept-rom-license == 0.4.2',
     'dopamine-rl == 4.0.6',
