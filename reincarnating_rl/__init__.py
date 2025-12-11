@@ -12,9 +12,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import jax
-import jax.numpy as jnp
-
-# 给新版JAX补全DeviceArray别名（映射到jnp.ndarray）
-if not hasattr(jax.interpreters.xla, "DeviceArray"):
-    jax.interpreters.xla.DeviceArray = jnp.ndarray
