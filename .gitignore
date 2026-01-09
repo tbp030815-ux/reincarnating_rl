@@ -1,0 +1,8 @@
+__pycache__/
+teacher_ckpt/
+teacher_test/
+logs/
+logs_test/
+result/
+csv/
+wrong_csv/

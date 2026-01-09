@@ -1,0 +1,12 @@
+CUDA_VISIBLE_DEVICES=0 python -um reincarnating_rl_sunrise.train \
+  --agent=qdagger_dqn \
+  --base_dir=./reincarnating_rl_sunrise/logs/qdagger_dqn/Breakout/run_1 \
+  --gin_files=./reincarnating_rl_sunrise/configs/qdagger_dqn.gin \
+  --run_number=1 \
+  --gin_bindings=atari_lib.create_atari_environment.game_name=\"Breakout\" \
+  --gin_bindings=Runner.num_iterations=50 \
+  --gin_bindings=Runner.training_steps=10000 \
+  --gin_bindings=Runner.evaluation_steps=5000 \
+  --gin_bindings=Runner.max_steps_per_episode=2500 \
+  --teacher_checkpoint_dir=./reincarnating_rl_sunrise/teacher_ckpt/Breakout/1 \
+  --disable_jit=False
